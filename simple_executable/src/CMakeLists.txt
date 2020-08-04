@@ -17,15 +17,9 @@
 # along with simple_executable. If not, see <http://www.gnu.org/licenses/>.
 #
 
-cmake_minimum_required(VERSION 2.8.11)
+set(SOURCES
+    simple_executable.cpp
+)
 
-project(simple_executable)
-
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wextra")
-set(CMAKE_CXX_FLAGS_DEBUG "-g3 -ggdb -Og")
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE}")
-
-add_subdirectory(src)
+add_executable(simple_executable ${SOURCES})
 
